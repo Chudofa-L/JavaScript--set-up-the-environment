@@ -3,6 +3,7 @@ import globals from "globals";
 import { defineConfig } from "eslint/config";
 import jest from "eslint-plugin-jest";
 import eslintRecommended from "eslint-plugin-prettier/recommended";
+import plugin from "eslint-plugin-jest";
 
 
 export default defineConfig([
