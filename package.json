@@ -19,7 +19,7 @@
     "url": "https://github.com/Chudofa-L/JavaScript--set-up-the-environment/issues"
   },
   "homepage": "https://github.com/Chudofa-L/JavaScript--set-up-the-environment#readme",
-  "lint-staged": {
+   "lint-staged": {
     "src/**/*.js": "eslint"
   },
   "devDependencies": {

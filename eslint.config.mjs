@@ -3,7 +3,6 @@ import globals from "globals";
 import { defineConfig } from "eslint/config";
 import jest from "eslint-plugin-jest";
 import eslintRecommended from "eslint-plugin-prettier/recommended";
-import plugin from "eslint-plugin-jest";
 
 
 export default defineConfig([
@@ -12,10 +11,9 @@ export default defineConfig([
   { files: ["**/*.{js,mjs,cjs}"], languageOptions: { globals: globals.browser } },
   {
     rules: {
-       "prefer-const": "error",
-       "no-unused-vars": "error",
-       "no-console": "error",
-       "semi": "error",
+      "prefer-const": "error",
+      "no-unused-vars": "error",
+      "semi": "error",
     },
   },
   {
