@@ -150,12 +150,82 @@ v          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #          message: |
 #            You can check this code at CodeSandbox with the link
 #            https://githubbox.com/${{ github.repository }}/tree/${{ github.head_ref }}
+#
+#9. Modul
+#    npx node-static .
+#    npx -y node-static src // сервер
+#10. eslint-config-airbnb-base //// https://www.npmjs.com/package/eslint-config-airbnb-base
+#    npx install-peerdeps --dev eslint-config-airbnb-base
+#    eslint.config :
+#    
+#11. GtHub Pages
+#    файл github-pages.yml :
+#    name: GitHub Pages
+#
+#on:
+#  pull_request:
+#
+#jobs:
+#  deploy:
+#    runs-on: ubuntu-22.04
+#    permissions:
+#      contents: write
+#    steps:
+#      - uses: actions/checkout@v3
+#
+#      - name: Build
+#        run: |
+#          mkdir dist
+#          cp -R src/* dist
+#      - name: Deploy
+#        uses: peaceiris/actions-gh-pages@v4
+#        with:
+#          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          publish_dir: ./dist
+#12. Webpack
+#    npm install webpack webpack-cli --save-dev
+#    npx webpack init
+#    y // none // yes // no //no // none //npm
+#    webpack.config.js :
+#    const path = require('path');
+#
+#module.exports = {
+#  entry: './src/index.js',
+#  output: {
+#    filename: 'main.js',
+#    path: path.resolve(__dirname, 'dist'),
+#  },
+#};
+#    npx webpack
+#    gitignore -> dist/
+#    npm install --save-dev html-webpack-plugin
+#     script :
+#      "dev": "webpack serve --mode=development",
+#       "build": "webpack --mode=production",
+#       config :
+#       const path = require('path');
+#const HtmlWebpackPlugin = require('html-webpack-plugin');
+#
+#module.exports = {
+#  entry: './src/index.js',
+#  output: {
+#    filename: 'main.js',
+#    path: path.resolve(__dirname, 'dist'),
+#  },
+#  plugins: [
+#    new HtmlWebpackPlugin({
+#      template: 'src/index.html',
+#    }),
+#  ],
+#  devServer: {
+#    static: {
+#      directory: path.join(__dirname, 'public'),
+#    },
+#    compress: true,
+#    port: 9000,
+#  },
+#};
+# npx webpack serve Y
+# 
 
-9. Modul
-    npx node-static .
-    npx -y node-static src // сервер
-10. eslint-config-airbnb-base //// https://www.npmjs.com/package/eslint-config-airbnb-base
-    npx install-peerdeps --dev eslint-config-airbnb-base
-    eslint.config :
-    
-    
+     
