@@ -150,5 +150,12 @@ v          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 #          message: |
 #            You can check this code at CodeSandbox with the link
 #            https://githubbox.com/${{ github.repository }}/tree/${{ github.head_ref }}
-             
-   
+
+9. Modul
+    npx node-static .
+    npx -y node-static src // сервер
+10. eslint-config-airbnb-base //// https://www.npmjs.com/package/eslint-config-airbnb-base
+    npx install-peerdeps --dev eslint-config-airbnb-base
+    eslint.config :
+    
+    
